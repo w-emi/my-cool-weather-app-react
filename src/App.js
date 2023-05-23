@@ -17,11 +17,17 @@ function App() {
         <Temperature />
       </div>
       <div className="text-center">
-        <a href="https://github.com/w-emi/my-cool-weather-app-react">
+        <a
+          href="https://github.com/w-emi/my-cool-weather-app-react"
+          target="_blank"
+        >
           Open-source code
         </a>
         , by{" "}
-        <a href="https://wanaemi-amaegbe-portfolio.netlify.app/">
+        <a
+          href="https://wanaemi-amaegbe-portfolio.netlify.app/"
+          target="_blank"
+        >
           Wanaemi Amaegbe
         </a>
       </div>
