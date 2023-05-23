@@ -1,13 +1,35 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
+} */
+
+.App {
+  font-family: sans-serif;
+}
+.App ul {
+  list-style: none;
+  padding: 0;
+}
+.App .container {
+  /* background: linear-gradient(to bottom, #d1f0ee, #168b9a); */
+  max-width: 800px;
+  max-height: 480px;
+  margin: 30px auto;
+  padding: 25px 50px;
+  border-radius: 15px;
+  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.weather-emo {
+  font-size: 40px;
+}
+.current-weather {
+  height: 60px;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -35,4 +57,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
