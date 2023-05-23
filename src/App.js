@@ -16,6 +16,15 @@ function App() {
         </ul>
         <Temperature />
       </div>
+      <div className="text-center">
+        <a href="https://github.com/w-emi/my-cool-weather-app-react">
+          Open-source code
+        </a>
+        , by{" "}
+        <a href="https://wanaemi-amaegbe-portfolio.netlify.app/">
+          Wanaemi Amaegbe
+        </a>
+      </div>
     </div>
   );
 }
