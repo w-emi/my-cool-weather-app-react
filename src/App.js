@@ -1,25 +1,18 @@
-import Search from "./Search.js";
-import Temperature from "./Temperature.js";
+import Weather from "./Weather.js";
 
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <Search />
-        <h1>New York</h1>
-        <ul>
-          <li>Current weather</li>
-          <li>Updated: 4:30 AM</li>
-        </ul>
-        <Temperature />
+        <Weather />
       </div>
       <div className="text-center">
         <a
           href="https://github.com/w-emi/my-cool-weather-app-react"
           target="_blank"
+          rel="noreferrer"
         >
           Open-source code
         </a>
@@ -27,6 +20,7 @@ function App() {
         <a
           href="https://wanaemi-amaegbe-portfolio.netlify.app/"
           target="_blank"
+          rel="noreferrer"
         >
           Wanaemi Amaegbe
         </a>
