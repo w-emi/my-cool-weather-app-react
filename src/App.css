@@ -1,60 +1,26 @@
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
+body {
+  background: rgba(20, 27, 63, 1); /*If nighttime*/
+  /* background: rgb(187, 220, 223); */ /*If daytime*/
+}
 .App {
   font-family: sans-serif;
 }
-.App ul {
-  list-style: none;
-  padding: 0;
-}
+
 .App .container {
   /* background: linear-gradient(to bottom, #d1f0ee, #168b9a); */
+  background: url(assets/dark-blue-bg.jpg); /*If nighttime*/
+  /* background: url(assets/light-blue-bg.jpg); If daytime */
   max-width: 800px;
   max-height: 480px;
   margin: 30px auto;
-  padding: 25px 50px;
+  padding: 25px 40px;
   border-radius: 15px;
   box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.3);
 }
-
-.weather-emo {
-  font-size: 40px;
+.App .footer {
+  text-align: center;
+  color: #fff;
 }
-.current-weather {
-  height: 60px;
-  font-size: 45px;
-  font-weight: bold;
+.App .footer a {
+  color: #fff;
 }
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

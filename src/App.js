@@ -8,7 +8,7 @@ function App() {
       <div className="container">
         <Weather />
       </div>
-      <div className="text-center">
+      <div className="footer">
         <a
           href="https://github.com/w-emi/my-cool-weather-app-react"
           target="_blank"

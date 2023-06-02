@@ -1,0 +1,47 @@
+.weather-app {
+  color: #fff;
+}
+.weather-app ul {
+  list-style: none;
+  padding: 0;
+}
+
+.weather-app-details {
+  line-height: 30px;
+}
+.weather-app-place-time {
+  line-height: 24px;
+}
+.temperature {
+  height: 60px;
+  font-size: 60px;
+}
+.current-weather img {
+  width: 50px;
+  margin-top: -35px;
+}
+.temperature-unit {
+  position: relative;
+  left: 8px;
+  top: -18px;
+  font-size: 25px;
+}
+.feels-like {
+  line-height: 25px;
+  margin-top: -10px;
+}
+.feels-like strong {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.whp {
+  line-height: 10px;
+  margin: 45px 0 10px;
+}
+.whp-head,
+.feels-like p,
+.time-updated {
+  opacity: 0.6;
+  font-size: 15px;
+}
