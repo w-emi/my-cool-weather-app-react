@@ -17,7 +17,9 @@ export default function Temperature() {
           <p>Feels like 15°</p>
         </div>
       </div>
-      <div className="mt-2">Expect sunny skies. The high will reach 34°</div>
+      <div className="mt-2">
+        Expect sunny skies today. The high will reach 34°
+      </div>
       <div className="row">
         <div className="col whp">
           <p className="whp-head wind">Wind</p>
