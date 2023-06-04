@@ -1,5 +1,7 @@
 import React from "react";
+import axios from "axios";
 import Temperature from "./Temperature";
+
 import "./Weather.css";
 
 export default function Weather() {
