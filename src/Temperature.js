@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Temperature() {
+export default function Temperature(props) {
   return (
     <div className="current-temperature mt-5">
       <div className="row">
@@ -9,12 +9,12 @@ export default function Temperature() {
             src="https://assets.msn.com/weathermapdata/1/static/weather/Icons/taskbar_v10/Condition_Card/PartlyCloudyNightV2.svg"
             alt="CLoudy"
           ></img>
-          <span className="temperature"> 20</span>
+          <span className="temperature">{props.temperature}</span>
           <span className="temperature-unit">°C</span>
         </div>
         <div className="col feels-like">
-          <strong>Cloudy</strong>
-          <p>Feels like 15°</p>
+          <strong className="text-capitalize">Cloudy</strong>
+          <p>Feels like {props.feels_like}°</p>
         </div>
       </div>
       <div className="mt-2">
@@ -23,15 +23,15 @@ export default function Temperature() {
       <div className="row">
         <div className="col whp">
           <p className="whp-head wind">Wind</p>
-          <span>9 km/h</span>
+          <span>{props.wind} km/h</span>
         </div>
         <div className="col whp">
           <p className="whp-head humidity">Humidity</p>
-          <span>86%</span>
+          <span>{props.humidity}%</span>
         </div>
         <div className="col whp">
           <p className="whp-head pressure">Pressure</p>
-          <span>990 mb</span>
+          <span>{props.pressure}mb</span>
         </div>
       </div>
     </div>

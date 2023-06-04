@@ -15,6 +15,7 @@
 .temperature {
   height: 60px;
   font-size: 60px;
+  margin-left: 15px;
 }
 .current-weather img {
   width: 50px;
