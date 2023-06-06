@@ -1,7 +1,9 @@
 import React from "react";
 
 export default function Temperature(props) {
-  let url = `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.icon}.png`;
+  // let url = `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.icon}.png`;
+  let url = `https://openweathermap.org/img/wn/${props.iconCode}@2x.png`;
+
   return (
     <div className="current-temperature mt-5">
       <div className="row">
@@ -16,8 +18,7 @@ export default function Temperature(props) {
         </div>
       </div>
       <div className="mt-2">
-        Expect {props.description} today.{" "}
-        {/*The high will reach {props.temperature.high}°*/}
+        Expect {props.description} today. The high will reach {props.high}°
       </div>
       <div className="row">
         <div className="col whp">

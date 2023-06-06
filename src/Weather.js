@@ -12,21 +12,24 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       loaded: true,
-      time: new Date(response.data.time * 1000),
-      temperature: Math.round(response.data.temperature.current),
-      high: Math.round(response.data.temperature.maximum),
-      city: response.data.city,
+      time: new Date(response.data.dt * 1000),
+      temperature: Math.round(response.data.main.temp),
+      high: Math.round(response.data.main.temp_max),
+      city: response.data.name,
       wind: Math.round(response.data.wind.speed),
-      humidity: Math.round(response.data.temperature.humidity),
-      pressure: Math.round(response.data.temperature.pressure),
-      feels_like: Math.round(response.data.temperature.feels_like),
-      description: response.data.condition.description,
-      icon: response.data.condition.icon,
+      humidity: Math.round(response.data.main.humidity),
+      pressure: Math.round(response.data.main.pressure),
+      feels_like: Math.round(response.data.main.feels_like),
+      description: response.data.weather[0].description,
+      iconCode: response.data.weather[0].icon,
     });
   }
   function searchCity() {
-    const apiKey = "803fa995fa3a7bb53f14eafcc31ot80d";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    // const apiKey = "803fa995fa3a7bb53f14eafcc31ot80d";
+    // let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    let units = "metric";
+    const apiKey = "cf6b50b908fa2e0baca3eed8a569a5f6";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   }
   function handleSubmit(event) {
@@ -72,7 +75,7 @@ export default function Weather(props) {
             <ul>
               <li>Current weather</li>
               <li className="time-updated">
-                Updated: <Time time={weatherData.time} />
+                <Time time={weatherData.time} />
               </li>
             </ul>
           </div>
@@ -83,7 +86,7 @@ export default function Weather(props) {
             pressure={weatherData.pressure}
             feels_like={weatherData.feels_like}
             description={weatherData.description}
-            icon={weatherData.icon}
+            iconCode={weatherData.iconCode}
             high={weatherData.high}
           />
         </div>
