@@ -31,7 +31,11 @@ export default function Temperature(props) {
         </div>
         <div className="col whp">
           <p className="whp-head pressure">Pressure</p>
-          <span>{props.pressure}mb</span>
+          <span>{props.pressure} mb</span>
+        </div>
+        <div className="col whp">
+          <p className="whp-head pressure">Visibility</p>
+          <span>{props.visibility} km</span>
         </div>
       </div>
     </div>

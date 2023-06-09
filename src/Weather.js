@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Temperature from "./Temperature";
 import Time from "./Time";
+import WeatherForecast from "./WeatherForecast";
 
 import "./Weather.css";
 
@@ -9,7 +10,7 @@ export default function Weather(props) {
   let [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ loaded: false });
   function handleResponse(response) {
-    console.log(response.data);
+    console.log(response);
     setWeatherData({
       loaded: true,
       time: new Date(response.data.dt * 1000),
@@ -19,14 +20,14 @@ export default function Weather(props) {
       wind: Math.round(response.data.wind.speed),
       humidity: Math.round(response.data.main.humidity),
       pressure: Math.round(response.data.main.pressure),
+      visibility: response.data.visibility / 1000,
       feels_like: Math.round(response.data.main.feels_like),
       description: response.data.weather[0].description,
       iconCode: response.data.weather[0].icon,
+      coords: response.data.coord,
     });
   }
   function searchCity() {
-    // const apiKey = "803fa995fa3a7bb53f14eafcc31ot80d";
-    // let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
     let units = "metric";
     const apiKey = "cf6b50b908fa2e0baca3eed8a569a5f6";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
@@ -84,10 +85,15 @@ export default function Weather(props) {
             wind={weatherData.wind}
             humidity={weatherData.humidity}
             pressure={weatherData.pressure}
+            visibility={weatherData.visibility}
             feels_like={weatherData.feels_like}
             description={weatherData.description}
             iconCode={weatherData.iconCode}
             high={weatherData.high}
+          />
+          <WeatherForecast
+            iconCode={weatherData.iconCode}
+            coords={weatherData.coords}
           />
         </div>
       </div>

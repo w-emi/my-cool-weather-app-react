@@ -1,0 +1,19 @@
+.weather-forecast {
+  margin-top: 50px;
+}
+.weather-forecast-content {
+  border: 1px solid white;
+  border-radius: 15px;
+  margin: 4px;
+  padding: 5px 10px;
+  background: transparent;
+}
+.weather-forecast-weatherIcon {
+  width: 65px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+.weather-forecast-details {
+  margin-left: -25px;
+}
