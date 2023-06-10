@@ -20,7 +20,7 @@ export default function Weather(props) {
       wind: Math.round(response.data.wind.speed),
       humidity: Math.round(response.data.main.humidity),
       pressure: Math.round(response.data.main.pressure),
-      visibility: response.data.visibility / 1000,
+      visibility: Math.round(response.data.visibility / 1000),
       feels_like: Math.round(response.data.main.feels_like),
       description: response.data.weather[0].description,
       iconCode: response.data.weather[0].icon,
@@ -31,7 +31,10 @@ export default function Weather(props) {
     let units = "metric";
     const apiKey = "cf6b50b908fa2e0baca3eed8a569a5f6";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios
+      .get(apiUrl)
+      .then(handleResponse)
+      .catch((err) => console.log(err));
   }
   function handleSubmit(event) {
     event.preventDefault();
