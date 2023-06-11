@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Temperature(props) {
-  // let url = `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.icon}.png`;
   let url = `https://openweathermap.org/img/wn/${props.iconCode}@2x.png`;
 
   return (

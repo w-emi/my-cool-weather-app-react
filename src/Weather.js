@@ -10,7 +10,6 @@ export default function Weather(props) {
   let [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ loaded: false });
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       loaded: true,
       time: new Date(response.data.dt * 1000),
@@ -20,7 +19,7 @@ export default function Weather(props) {
       wind: Math.round(response.data.wind.speed),
       humidity: Math.round(response.data.main.humidity),
       pressure: Math.round(response.data.main.pressure),
-      visibility: Math.round(response.data.visibility / 1000),
+      visibility: response.data.visibility / 1000,
       feels_like: Math.round(response.data.main.feels_like),
       description: response.data.weather[0].description,
       iconCode: response.data.weather[0].icon,
@@ -65,12 +64,6 @@ export default function Weather(props) {
                 className="btn btn-outline-secondary"
               />
             </div>
-            {/* <div className="col">
-            <i
-              title="Current location"
-              class="fa-solid fa-location-dot location-icon"
-            ></i>
-          </div> */}
           </div>
         </form>
         <div className="weather-app-details">

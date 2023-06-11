@@ -6,6 +6,9 @@ export default function WeatherForecastDay(props) {
     let today = new Date(props.data.dt * 1000);
     let day = today.getDay();
     let date = today.getDate();
+    if (props.index === 0) {
+      days[day] = "Today";
+    }
     return `${days[day]} ${date}`;
   }
   return (
